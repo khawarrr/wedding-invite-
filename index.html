@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Wedding Invitation — You're invited to celebrate with us">
+<title>Fatima Ali &amp; Khawar Khan — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ================================================
+     LOADER
+================================================ -->
+<div class="loader" id="loader">
+  <div class="loader-mono">F &amp; K</div>
+  <div class="loader-bar"></div>
+  <div class="loader-sub">Loading your invitation</div>
+</div>
+
+<!-- ================================================
+     NAVIGATION
+================================================ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">F &amp; K</a>
+  <ul class="nav-links">
+    <!-- <li><a href="#story">Our Story</a></li> -->
+    <li><a href="#celebration">Celebration</a></li>
+    <!-- <li><a href="#gallery">Gallery</a></li> -->
+    <!-- <li><a href="#party">Wedding Party</a></li> -->
+    <li><a href="#rsvp">RSVP</a></li>
+  </ul>
+</nav>
+
+<!-- ================================================
+     HERO
+================================================ -->
+<section class="hero" id="hero">
+  <!-- Shimmer layer -->
+  <div class="hero-shimmer"></div>
+
+  <!-- Botanical SVG — top left -->
+  <svg class="botanical botanical-tl" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M10 210 C25 160 55 120 100 90 S175 45 200 8" stroke="#8B2035" stroke-width="1.2" fill="none"/>
+    <path d="M38 180 C60 158 82 130 94 105" stroke="#8B2035" stroke-width=".9" fill="none"/>
+    <path d="M70 148 C90 124 112 104 128 84" stroke="#8B2035" stroke-width=".9" fill="none"/>
+    <path d="M94 105 Q110 92 122 100 Q112 114 94 105" fill="#8B2035" opacity=".45"/>
+    <path d="M94 105 Q80 92 70 100 Q80 114 94 105" fill="#8B2035" opacity=".45"/>
+    <path d="M128 84 Q144 71 155 79 Q146 93 128 84" fill="#8B2035" opacity=".4"/>
+    <path d="M38 180 Q28 166 34 152 Q48 160 38 180" fill="#8B2035" opacity=".35"/>
+    <ellipse cx="70" cy="152" rx="11" ry="18" fill="#8B2035" opacity=".35" transform="rotate(25 70 152)"/>
+    <circle cx="128" cy="80" r="3.5" fill="#F2C0C8" opacity=".7"/>
+    <circle cx="200" cy="10" r="4.5" fill="#8B2035" opacity=".45"/>
+    <circle cx="94" cy="100" r="2.5" fill="#F2C0C8" opacity=".6"/>
+    <circle cx="55" cy="168" r="2" fill="#8B2035" opacity=".5"/>
+    <circle cx="160" cy="60" r="2" fill="#F2C0C8" opacity=".5"/>
+    <path d="M160 58 Q170 46 178 50 Q172 62 160 58" fill="#8B2035" opacity=".35"/>
+  </svg>
+
+  <!-- Botanical SVG — bottom right (mirrored via CSS rotate) -->
+  <svg class="botanical botanical-br" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M10 210 C25 160 55 120 100 90 S175 45 200 8" stroke="#8B2035" stroke-width="1.2" fill="none"/>
+    <path d="M38 180 C60 158 82 130 94 105" stroke="#8B2035" stroke-width=".9" fill="none"/>
+    <path d="M70 148 C90 124 112 104 128 84" stroke="#8B2035" stroke-width=".9" fill="none"/>
+    <path d="M94 105 Q110 92 122 100 Q112 114 94 105" fill="#8B2035" opacity=".45"/>
+    <path d="M94 105 Q80 92 70 100 Q80 114 94 105" fill="#8B2035" opacity=".45"/>
+    <circle cx="128" cy="80" r="3.5" fill="#F2C0C8" opacity=".7"/>
+    <circle cx="200" cy="10" r="4.5" fill="#8B2035" opacity=".45"/>
+    <ellipse cx="70" cy="152" rx="11" ry="18" fill="#8B2035" opacity=".35" transform="rotate(25 70 152)"/>
+  </svg>
+
+  <!-- Floating petals (injected by JS) -->
+  <div class="petals" id="petals"></div>
+
+  <!-- Hero content -->
+  <div class="hero-content">
+    <p class="hero-eyebrow">Together with their families</p>
+    <h1 class="hero-names">
+      Khawar Khan<br>
+      <span class="hero-amp">&amp;</span><br>
+      Fatima Ali
+    </h1>
+    <div class="hero-divider">
+      <div class="hdl"></div>
+      <div class="hdd"></div>
+      <div class="hdl"></div>
+    </div>
+    <p class="hero-date">Saturday, the 22nd of August, 2026</p>
+    <p class="hero-loc">Montrose Wedding Venue &nbsp;·&nbsp; Monroe, NC</p>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ================================================
+     COUNTDOWN
+================================================ -->
+<section class="section section-alt countdown" id="countdown">
+  <p class="cd-sub reveal">Days Until We Say</p>
+  <h2 class="cd-head reveal d1">"I Do"</h2>
+  <div class="cd-grid reveal d2">
+    <div class="cd-item">
+      <div class="cd-num" id="cd-days">00</div>
+      <div class="cd-unit">Days</div>
+    </div>
+    <div class="cd-sep">:</div>
+    <div class="cd-item">
+      <div class="cd-num" id="cd-hours">00</div>
+      <div class="cd-unit">Hours</div>
+    </div>
+    <div class="cd-sep">:</div>
+    <div class="cd-item">
+      <div class="cd-num" id="cd-mins">00</div>
+      <div class="cd-unit">Minutes</div>
+    </div>
+    <div class="cd-sep">:</div>
+    <div class="cd-item">
+      <div class="cd-num" id="cd-secs">00</div>
+      <div class="cd-unit">Seconds</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     OUR STORY
+================================================ -->
+<section class="section story" id="story" style="display:none">
+  <div class="container">
+    <p class="s-eye reveal">Our Love Story</p>
+    <h2 class="s-title reveal d1">How It All Began</h2>
+    <div class="s-div reveal d2">
+      <div class="sdl"></div><div class="sdo"></div><div class="sdl"></div>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Item 1 — left -->
+      <div class="tl-item">
+        <div class="tl-content reveal-l">
+          <div class="tl-year">2020</div>
+          <div class="tl-ttl">The First Meeting</div>
+          <div class="tl-txt">A chance encounter at a mutual friend's gathering changed everything. Two strangers laughed at the same joke, and the evening stretched long past midnight.</div>
+        </div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <!-- Item 2 — right -->
+      <div class="tl-item">
+        <div class="tl-empty"></div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-content reveal-r">
+          <div class="tl-year">2021</div>
+          <div class="tl-ttl">Our First Adventure</div>
+          <div class="tl-txt">A spontaneous road trip with a broken GPS and a playlist we still play today. We discovered that getting lost together was the best way to find each other.</div>
+        </div>
+      </div>
+
+      <!-- Item 3 — left -->
+      <div class="tl-item">
+        <div class="tl-content reveal-l">
+          <div class="tl-year">2023</div>
+          <div class="tl-ttl">The Proposal</div>
+          <div class="tl-txt">Beneath a canopy of stars in the mountains, with trembling hands and a full heart, came a question that changed everything. The answer was never in doubt.</div>
+        </div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <!-- Item 4 — right -->
+      <div class="tl-item">
+        <div class="tl-empty"></div>
+        <div class="tl-center"><div class="tl-dot"></div></div>
+        <div class="tl-content reveal-r">
+          <div class="tl-year">2026</div>
+          <div class="tl-ttl">Forever Begins</div>
+          <div class="tl-txt">On August 22nd, surrounded by the people we love most, we begin the greatest chapter of all. We cannot wait to celebrate with you.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     QUOTE BAND
+================================================ -->
+<div class="quote-band">
+  <p class="quote-text reveal">
+    "In all the world, there is no heart for me like <em>yours</em>.<br>In all the world, there is no love for you like mine."
+  </p>
+  <p class="quote-attr reveal d2">— Maya Angelou</p>
+</div>
+
+<!-- ================================================
+     CELEBRATION — EVENT DETAILS
+================================================ -->
+<section class="section section-alt celebration" id="celebration">
+  <div class="container">
+    <p class="s-eye reveal">Join Us</p>
+    <h2 class="s-title reveal d1">The Celebration</h2>
+    <div class="s-div reveal d2">
+      <div class="sdl"></div><div class="sdo"></div><div class="sdl"></div>
+    </div>
+
+    <div class="events-grid events-single">
+
+      <!-- Ceremony & Reception -->
+      <div class="event-card reveal d1">
+        <svg class="event-icon" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23 4 L23 18 M17 8 L23 14 L29 8" stroke="#8B2035" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="23" cy="23" r="16" stroke="#8B2035" stroke-width="1" opacity=".5"/>
+          <path d="M15 28 Q23 22 31 28" stroke="#8B2035" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <path d="M11 34 L35 34" stroke="#8B2035" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+        </svg>
+        <div class="event-type">Ceremony &amp; Reception</div>
+        <div class="event-name">The Exchange of Vows</div>
+        <ul class="event-detail-list">
+          <li class="event-detail">
+            <span class="edl">Date</span>
+            <span class="edv">Saturday, August 22nd, 2026</span>
+          </li>
+          <li class="event-mini-div"></li>
+          <li class="event-detail">
+            <span class="edl">Time</span>
+            <span class="edv">6:00 PM – 11:45 PM</span>
+          </li>
+          <li class="event-mini-div"></li>
+          <li class="event-detail">
+            <span class="edl">Venue</span>
+            <span class="edv">Montrose Wedding Venue</span>
+          </li>
+          <li class="event-detail">
+            <span class="edl">Address</span>
+            <span class="edv">305 E Phifer St, Monroe, NC 28110</span>
+          </li>
+        </ul>
+        <button class="map-btn" id="mapBtn">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1C4.067 1 2.5 2.567 2.5 4.5c0 2.625 3.5 6.5 3.5 6.5S9.5 7.125 9.5 4.5C9.5 2.567 7.933 1 6 1zm0 4.75A1.25 1.25 0 1 1 6 3.25a1.25 1.25 0 0 1 0 2.5z" fill="currentColor"/></svg>
+          View on Map
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Map picker modal -->
+    <div class="map-modal" id="mapModal">
+      <div class="map-modal-box">
+        <p class="map-modal-title">Open in Maps</p>
+        <a class="map-modal-opt" href="https://maps.apple.com/?q=305+E+Phifer+St,+Monroe,+NC+28110" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5C5.686 1.5 3 4.186 3 7.5c0 3.938 5.25 9.75 5.25 9.75S15 11.438 15 7.5C15 4.186 12.314 1.5 9 1.5zm0 8.25A1.875 1.875 0 1 1 9 5.75a1.875 1.875 0 0 1 0 3.75z" fill="#8B2035"/></svg>
+          Apple Maps
+        </a>
+        <a class="map-modal-opt" href="https://maps.google.com/?q=305+E+Phifer+St,+Monroe,+NC+28110" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5C5.686 1.5 3 4.186 3 7.5c0 3.938 5.25 9.75 5.25 9.75S15 11.438 15 7.5C15 4.186 12.314 1.5 9 1.5zm0 8.25A1.875 1.875 0 1 1 9 5.75a1.875 1.875 0 0 1 0 3.75z" fill="#4285F4"/></svg>
+          Google Maps
+        </a>
+        <button class="map-modal-cancel" id="mapModalCancel">Cancel</button>
+      </div>
+    </div>
+
+    <p class="event-note reveal d4">Dress code: Black Tie &nbsp;·&nbsp; Kindly no children under 12</p>
+  </div>
+</section>
+
+<!-- ================================================
+     GALLERY
+================================================ -->
+<section class="section gallery" id="gallery" style="display:none">
+  <div class="container" style="max-width:var(--max)">
+    <p class="s-eye reveal">Captured Moments</p>
+    <h2 class="s-title reveal d1">Our Journey in Photos</h2>
+    <div class="s-div reveal d2">
+      <div class="sdl"></div><div class="sdo"></div><div class="sdl"></div>
+    </div>
+  </div>
+
+  <div class="gallery-grid reveal">
+    <div class="gi">
+      <img src="https://picsum.photos/seed/wedA/800/900" alt="Couple photo" loading="lazy">
+      <div class="gi-overlay"><div class="gi-plus">+</div></div>
+    </div>
+    <div class="gi">
+      <img src="https://picsum.photos/seed/wedB/600/380" alt="Couple photo" loading="lazy">
+      <div class="gi-overlay"><div class="gi-plus">+</div></div>
+    </div>
+    <div class="gi">
+      <img src="https://picsum.photos/seed/wedC/600/380" alt="Couple photo" loading="lazy">
+      <div class="gi-overlay"><div class="gi-plus">+</div></div>
+    </div>
+    <div class="gi">
+      <img src="https://picsum.photos/seed/wedD/600/380" alt="Couple photo" loading="lazy">
+      <div class="gi-overlay"><div class="gi-plus">+</div></div>
+    </div>
+    <div class="gi">
+      <img src="https://picsum.photos/seed/wedE/600/380" alt="Couple photo" loading="lazy">
+      <div class="gi-overlay"><div class="gi-plus">+</div></div>
+    </div>
+    <div class="gi">
+      <img src="https://picsum.photos/seed/wedF/700/380" alt="Couple photo" loading="lazy">
+      <div class="gi-overlay"><div class="gi-plus">+</div></div>
+    </div>
+    <div class="gi">
+      <img src="https://picsum.photos/seed/wedG/700/380" alt="Couple photo" loading="lazy">
+      <div class="gi-overlay"><div class="gi-plus">+</div></div>
+    </div>
+    <div class="gi">
+      <img src="https://picsum.photos/seed/wedH/600/380" alt="Couple photo" loading="lazy">
+      <div class="gi-overlay"><div class="gi-plus">+</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox hidden with gallery -->
+<div class="lightbox" id="lightbox" style="display:none">
+  <button class="lb-close" id="lbClose">&#215;</button>
+  <img src="" alt="Gallery photo" id="lbImg">
+</div>
+
+<!-- ================================================
+     WEDDING PARTY
+================================================ -->
+<section class="section section-alt" id="party" style="display:none">
+  <div class="container">
+    <p class="s-eye reveal">Our Favourite People</p>
+    <h2 class="s-title reveal d1">The Wedding Party</h2>
+    <div class="s-div reveal d2">
+      <div class="sdl"></div><div class="sdo"></div><div class="sdl"></div>
+    </div>
+
+    <!-- Bridesmaids -->
+    <div class="party-group reveal">
+      <div class="party-group-ttl">Bridesmaids</div>
+      <div class="party-grid">
+        <div class="party-member">
+          <div class="party-avatar">
+            <img src="https://picsum.photos/seed/bm1/120/120" alt="Maid of Honour" loading="lazy">
+          </div>
+          <div class="party-name">[Name]</div>
+          <div class="party-role">Maid of Honour</div>
+        </div>
+        <div class="party-member">
+          <div class="party-avatar">
+            <img src="https://picsum.photos/seed/bm2/120/120" alt="Bridesmaid" loading="lazy">
+          </div>
+          <div class="party-name">[Name]</div>
+          <div class="party-role">Bridesmaid</div>
+        </div>
+        <div class="party-member">
+          <div class="party-avatar">
+            <img src="https://picsum.photos/seed/bm3/120/120" alt="Bridesmaid" loading="lazy">
+          </div>
+          <div class="party-name">[Name]</div>
+          <div class="party-role">Bridesmaid</div>
+        </div>
+        <div class="party-member">
+          <div class="party-avatar">
+            <img src="https://picsum.photos/seed/bm4/120/120" alt="Bridesmaid" loading="lazy">
+          </div>
+          <div class="party-name">[Name]</div>
+          <div class="party-role">Bridesmaid</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Groomsmen -->
+    <div class="party-group reveal d2">
+      <div class="party-group-ttl">Groomsmen</div>
+      <div class="party-grid">
+        <div class="party-member">
+          <div class="party-avatar">
+            <img src="https://picsum.photos/seed/gm1/120/120" alt="Best Man" loading="lazy">
+          </div>
+          <div class="party-name">[Name]</div>
+          <div class="party-role">Best Man</div>
+        </div>
+        <div class="party-member">
+          <div class="party-avatar">
+            <img src="https://picsum.photos/seed/gm2/120/120" alt="Groomsman" loading="lazy">
+          </div>
+          <div class="party-name">[Name]</div>
+          <div class="party-role">Groomsman</div>
+        </div>
+        <div class="party-member">
+          <div class="party-avatar">
+            <img src="https://picsum.photos/seed/gm3/120/120" alt="Groomsman" loading="lazy">
+          </div>
+          <div class="party-name">[Name]</div>
+          <div class="party-role">Groomsman</div>
+        </div>
+        <div class="party-member">
+          <div class="party-avatar">
+            <img src="https://picsum.photos/seed/gm4/120/120" alt="Groomsman" loading="lazy">
+          </div>
+          <div class="party-name">[Name]</div>
+          <div class="party-role">Groomsman</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================
+     RSVP
+================================================ -->
+<section class="section rsvp-section" id="rsvp">
+  <div class="container">
+    <p class="s-eye reveal">You're Invited</p>
+    <h2 class="s-title reveal d1">Kindly Reply</h2>
+    <div class="s-div reveal d2">
+      <div class="sdl"></div><div class="sdo"></div><div class="sdl"></div>
+    </div>
+
+    <div class="rsvp-card reveal d2">
+      <p class="rsvp-deadline">Kindly reply by July 1st, 2026</p>
+
+      <!-- Form -->
+      <form id="rsvpForm">
+        <div class="form-row">
+          <div class="fg">
+            <label class="flbl" for="fname">First Name</label>
+            <input class="finp" type="text" id="fname" name="fname" placeholder="Your first name" required>
+          </div>
+          <div class="fg">
+            <label class="flbl" for="lname">Last Name</label>
+            <input class="finp" type="text" id="lname" name="lname" placeholder="Your last name" required>
+          </div>
+        </div>
+
+        <div class="fg">
+          <label class="flbl" for="email">Email Address</label>
+          <input class="finp" type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="fg">
+          <label class="flbl">Will you be attending?</label>
+          <div class="att-opts">
+            <div class="att-opt">
+              <input type="radio" name="attendance" id="attYes" value="yes" checked>
+              <label class="att-lbl" for="attYes">
+                <span class="att-ico">&#9825;</span>
+                <span class="att-txt">Joyfully Accepts</span>
+              </label>
+            </div>
+            <div class="att-opt">
+              <input type="radio" name="attendance" id="attNo" value="no">
+              <label class="att-lbl" for="attNo">
+                <span class="att-ico">&#9825;</span>
+                <span class="att-txt">Regretfully Declines</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="fg" id="guestsField">
+          <label class="flbl" for="guests">Number of Guests (including yourself)</label>
+          <select class="fsel" id="guests" name="guests">
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7">7 Guests</option>
+            <option value="8">8 Guests</option>
+            <option value="9">9 Guests</option>
+            <option value="10">10 Guests</option>
+          </select>
+        </div>
+
+        <div class="fg">
+          <label class="flbl" for="message">A Note to the Couple (optional)</label>
+          <textarea class="ftxt" id="message" name="message" placeholder="Share your well-wishes…"></textarea>
+        </div>
+
+        <button class="btn-send" type="submit">Send RSVP</button>
+      </form>
+
+      <!-- Success state -->
+      <div class="rsvp-success" id="rsvpSuccess">
+        <div class="rs-icon">&#9825;</div>
+        <div class="rs-ttl">We're Delighted!</div>
+        <p class="rs-txt">
+          Thank you for your reply. We can't wait to celebrate this beautiful day with you.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     FOOTER
+================================================ -->
+<footer>
+  <div class="ft-mono">F &amp; K</div>
+  <div class="ft-date">August 22, 2026 &nbsp;·&nbsp; Monroe, NC</div>
+  <div class="ft-div"></div>
+  <p class="ft-quote">
+    "With every heartbeat, with every breath —<br>
+    from this day forward, always."
+  </p>
+  <div class="ft-bottom">&copy; 2026 Fatima Ali &amp; Khawar Khan &nbsp;·&nbsp; Made with love</div>
+</footer>
+
+<!-- ================================================
+     JAVASCRIPT
+================================================ -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
