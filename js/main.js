@@ -1,4 +1,34 @@
 /* -----------------------------------------------
+   Password gate
+----------------------------------------------- */
+(function() {
+  const gate  = document.getElementById('gate');
+  const input = document.getElementById('gateInput');
+  const btn   = document.getElementById('gateBtn');
+  const error = document.getElementById('gateError');
+  const PASSWORD = '0822';
+
+  if (sessionStorage.getItem('fk_unlocked') === '1') {
+    gate.classList.add('unlocked');
+    return;
+  }
+
+  function attempt() {
+    if (input.value.trim() === PASSWORD) {
+      sessionStorage.setItem('fk_unlocked', '1');
+      gate.classList.add('unlocked');
+    } else {
+      error.textContent = 'Incorrect code. Please try again.';
+      input.value = '';
+      input.focus();
+    }
+  }
+
+  btn.addEventListener('click', attempt);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') attempt(); });
+})();
+
+/* -----------------------------------------------
    Loader
 ----------------------------------------------- */
 window.addEventListener('load', () => {

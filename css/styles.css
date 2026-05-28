@@ -38,6 +38,68 @@ body {
 }
 
 /* ================================================
+   PASSWORD GATE
+================================================ */
+.gate {
+  position: fixed; inset: 0; z-index: 19999;
+  background: var(--cream);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  transition: opacity .7s var(--ease), visibility .7s;
+}
+.gate.unlocked { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.gate-box {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; width: 100%; max-width: 340px;
+}
+.gate-mono {
+  font-family: var(--ff-serif);
+  font-size: clamp(52px,14vw,80px);
+  font-weight: 300; font-style: italic;
+  color: var(--champagne); letter-spacing: .08em;
+  margin-bottom: 20px;
+}
+.gate-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: .35em; text-transform: uppercase;
+  color: var(--light); margin-bottom: 28px;
+}
+.gate-input-wrap {
+  width: 100%; margin-bottom: 16px;
+}
+.gate-input {
+  width: 100%; padding: 16px 20px;
+  background: transparent;
+  border: 1px solid rgba(139,32,53,.3);
+  border-radius: 2px;
+  font-family: var(--ff-serif);
+  font-size: 26px; font-style: italic;
+  letter-spacing: .5em;
+  color: var(--dark); text-align: center;
+  outline: none;
+  transition: border-color .3s;
+  -webkit-appearance: none;
+}
+.gate-input:focus { border-color: var(--champagne); }
+.gate-input::placeholder { color: rgba(139,32,53,.25); letter-spacing: .4em; }
+.gate-btn {
+  width: 100%; padding: 15px;
+  background: var(--champagne); color: #fff;
+  border: none; border-radius: 2px; cursor: pointer;
+  font-family: var(--ff-sans);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: .4em; text-transform: uppercase;
+  transition: opacity .3s;
+}
+.gate-btn:hover { opacity: .85; }
+.gate-error {
+  margin-top: 14px; min-height: 18px;
+  font-size: 11px; color: #b05a5a;
+  letter-spacing: .1em;
+}
+
+/* ================================================
    LOADER
 ================================================ */
 .loader {
