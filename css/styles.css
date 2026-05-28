@@ -853,6 +853,26 @@ nav.scrolled {
 }
 .rs-txt { font-size: 15px; font-weight: 300; line-height: 1.75; color: var(--mid); }
 
+.rs-cal { margin-top: 28px; }
+.rs-cal-label {
+  font-size: 9px; font-weight: 500;
+  letter-spacing: .35em; text-transform: uppercase;
+  color: var(--light); margin-bottom: 14px;
+}
+.rs-cal-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.rs-cal-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 11px 20px;
+  border: 1px solid var(--champagne);
+  color: var(--champagne);
+  font-family: var(--ff-sans);
+  font-size: 9px; font-weight: 500;
+  letter-spacing: .28em; text-transform: uppercase;
+  text-decoration: none; border-radius: 1px;
+  transition: background .3s, color .3s;
+}
+.rs-cal-btn:hover { background: var(--champagne); color: #fff; }
+
 /* ================================================
    FOOTER
 ================================================ */

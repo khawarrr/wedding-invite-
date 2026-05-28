@@ -161,16 +161,12 @@ document.getElementById('rsvpForm').addEventListener('submit', async function(e)
   const payload = {
     fname:      form.fname.value.trim(),
     lname:      form.lname.value.trim(),
-    email:      form.email.value.trim(),
     attendance: form.attendance.value,
     guests:     attending ? form.guests.value : '0',
     message:    form.message.value.trim()
   };
 
   try {
-    // mode: 'no-cors' — Google Apps Script redirects on POST so we can't
-    // read the response, but the data is written to the sheet successfully.
-    // Content-Type: text/plain avoids a CORS preflight that would be blocked.
     await fetch(SCRIPT_URL, {
       method:  'POST',
       mode:    'no-cors',
@@ -180,6 +176,23 @@ document.getElementById('rsvpForm').addEventListener('submit', async function(e)
 
     form.style.display = 'none';
     document.getElementById('rsvpSuccess').classList.add('show');
+
+    // Wire up Apple Calendar ICS download
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Fatima & Khawar Wedding//EN',
+      'BEGIN:VEVENT',
+      'DTSTART:20260822T180000',
+      'DTEND:20260822T234500',
+      'SUMMARY:Fatima & Khawar Wedding',
+      'LOCATION:Montrose Wedding Venue\\, 305 E Phifer St\\, Monroe\\, NC 28110',
+      'DESCRIPTION:You are cordially invited to the wedding of Fatima Ali & Khawar Khan.',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    document.getElementById('calApple').href = URL.createObjectURL(blob);
 
   } catch (err) {
     btn.textContent = 'Try Again';
