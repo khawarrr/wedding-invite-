@@ -670,9 +670,15 @@ nav.scrolled {
 
 .event-note {
   margin-top: 44px;
+  display: inline-flex; align-items: center; gap: 18px;
   font-family: var(--ff-serif);
-  font-size: 18px; font-style: italic;
-  color: var(--light); text-align: center;
+  font-size: 17px; font-style: italic;
+  color: var(--mid);
+  border-top: 1px solid rgba(139,32,53,.2);
+  border-bottom: 1px solid rgba(139,32,53,.2);
+  padding: 14px 32px;
+  letter-spacing: .04em;
+  text-align: center;
 }
 
 /* ================================================
