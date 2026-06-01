@@ -568,6 +568,39 @@ nav.scrolled {
   font-size: 30px; font-weight: 300; font-style: italic;
   color: var(--dark); margin-bottom: 24px;
 }
+
+.event-invite {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 6px; margin-bottom: 28px;
+}
+.ei-parents {
+  font-family: var(--ff-serif);
+  font-size: 20px; font-weight: 400; font-style: italic;
+  color: var(--dark);
+}
+.ei-along {
+  font-size: 10px; font-weight: 400;
+  letter-spacing: .3em; text-transform: uppercase;
+  color: var(--light); margin: 4px 0;
+}
+.ei-body {
+  font-family: var(--ff-serif);
+  font-size: 15px; font-weight: 300; font-style: italic;
+  color: var(--mid); line-height: 1.7;
+  margin: 8px 0;
+}
+.ei-names {
+  font-family: var(--ff-serif);
+  font-size: clamp(24px,5vw,32px); font-weight: 300; font-style: italic;
+  color: var(--dark); line-height: 1.1;
+}
+.ei-amp {
+  font-family: var(--ff-serif);
+  font-size: 28px; font-style: italic; font-weight: 300;
+  color: var(--champagne); line-height: 1;
+  margin: 2px 0;
+}
+
 .event-detail-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .event-detail { display: flex; flex-direction: column; gap: 3px; }
 .edl {
